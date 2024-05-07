@@ -168,5 +168,9 @@ public class AirportService {
         }
         return count;
     }
+    public int countOfBookingsDoneByPassengerAllCombined(int passengerId){
+        int count = obj.countOfBookingsDoneByPassengerAllCombined(passengerId);
+        return count;
+    }
 }
 

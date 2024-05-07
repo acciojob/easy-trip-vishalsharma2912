@@ -125,6 +125,7 @@ public class AirportRepositry {
         }
         return count;
     }
+
     public List<Airport> getAllAirport(){
         return new ArrayList<>(AirportDb.values());
     }
@@ -151,4 +152,17 @@ public class AirportRepositry {
         }
         else return  0;
     }
+    public int countOfBookingsDoneByPassengerAllCombined(int passengerId){
+        int ct = 0;
+        for(int flightId : flightPassengerDb.keySet()){
+            List<Integer> passengerList = flightPassengerDb.get(flightId);
+            for(int pId : passengerList){
+                if(pId == passengerId){
+                    ct++;
+                }
+            }
+        }
+        return ct;
+    }
+
 }
