@@ -117,8 +117,8 @@ public class AirportRepositry {
         for(Integer fid : flightPassengerDb.keySet()){
 
             List<Integer> passengers = flightPassengerDb.get(fid);
-            for(int i=0;i<passengers.size();i++){
-                if(passengers.get(i)==passengerId){
+            for(Integer a : passengers){
+                if(a==passengerId){
                     count++;
                 }
             }
